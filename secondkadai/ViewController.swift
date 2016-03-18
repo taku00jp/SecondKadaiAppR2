@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet  var textField: UIView!
+    @IBOutlet weak var textField: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +27,7 @@ class ViewController: UIViewController {
             
             let secondViewController:SecondViewController = segue.destinationViewController as! SecondViewController
             
-            // 変数:遷移先ViewController型 = segue.destinationViewController as 遷移先ViewController型
-            // segue.destinationViewController は遷移先のViewController
-            
-            secondViewController.sendText = self.textField.text
+            secondViewController.sendText = self.textField.text!
 
   }
  }
